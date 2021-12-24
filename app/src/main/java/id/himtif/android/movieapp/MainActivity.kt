@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         createBottomNavigation()
     }
 
-
+    /**
+        Penambahan Fungsi untuk Bottom Navigation
+    */
     private fun createBottomNavigation(){
         val navController = findNavController(R.id.nav_host_fragment)
 

@@ -7,19 +7,9 @@
     tools:context=".SplashActivity"
     android:orientation="vertical"
     tools:viewBindingIgnore="true"
+    android:background="@drawable/splashscreen1"
     >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/group572"
-
-
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

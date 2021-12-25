@@ -6,9 +6,240 @@
     tools:context=".ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="?android:attr/windowBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/nav_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/mobile_navigation" />
+
+        <!-- Background -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/greybg"
+            >
+            <!-- Profile Bagian Atas -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Atas"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/dark_blue"
+                tools:ignore="MissingConstraints"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="180dp"
+                    android:layout_height="220dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="30dp"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp"
+
+                    />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ant_design_setting_outlined"
+                    app:layout_constraintLeft_toRightOf="@id/profile_image"
+                    android:layout_marginLeft="160dp"
+                    android:paddingTop="20dp"
+                    android:background="@color/dark_blue"
+                    >
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="HENDRAWAN WIBOWO J"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toRightOf="@id/profile_image"
+                    android:paddingTop="75dp"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+62 822-1710-6768"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    android:paddingTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    app:layout_constraintLeft_toRightOf="@id/profile_image"
+                    >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="hendrawanwib@gmail.com"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hp"
+                    app:layout_constraintLeft_toRightOf="@id/profile_image"
+                    >
+                </TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Start Relative Layout Dana Top Up -->
+            <RelativeLayout
+                android:id="@+id/dana_topup"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@id/Atas"
+                android:background="@color/white"
+                >
+
+                <Button
+                    android:id="@+id/btn_dana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:text="TOP UP"
+                    android:backgroundTint="@color/blue">
+
+                </Button>
+
+                <!-- Logo Dana -->
+                <ImageView
+                    android:id="@+id/iv_dana"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/danalogo"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    >
+                </ImageView>
+
+                <!-- Text View Uang -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp.100.000"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@id/iv_dana"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="9dp"
+
+                    >
+                </TextView>
+
+                <!-- Text View Uang -->
+                <TextView
+                    android:id="@+id/tv_uang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_toRightOf="@id/iv_dana"
+                    android:text="+62 822-1710-6768"
+                    android:textColor="@color/darkgrey">
+                </TextView>
+
+            </RelativeLayout>
+            <!-- End Relative Layout Dana Top Up -->
+
+            <!-- Start Relative Layout Film Saya -->
+            <RelativeLayout
+                android:id="@+id/filmsaya"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@id/dana_topup"
+                android:background="@drawable/custom_button2"
+
+                >
+
+                <ImageView
+                    android:id="@+id/iv_iconmovie"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_iconmoviepf"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_iconmovie"
+                    android:text="Film Saya"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+                </TextView>
+            </RelativeLayout>
+            <!-- End Relative Layout Dana Top Up -->
+
+            <!-- Start Relative Layout Bagikan Kode -->
+            <RelativeLayout
+                android:id="@+id/bagikankode"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@id/filmsaya"
+                android:background="@drawable/custom_button3"
+                >
+                <ImageView
+                    android:id="@+id/iv_iv_sharekode"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_sharekode"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp">
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bagikan Kode Untuk Mendapatkan Saldo"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/iv_iv_sharekode"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true">
+                </TextView>
+
+            </RelativeLayout>
+            <!-- End Relative Layout Dana Bagikan Kode -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

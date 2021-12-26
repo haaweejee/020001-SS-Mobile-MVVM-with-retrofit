@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/setting"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/custom_button2"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_backbutton">
+
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengaturan"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_toRightOf="@+id/btn_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+    </RelativeLayout>
+
+    <!--    Start Relative Layout Akun -->
+    <RelativeLayout
+        android:id="@+id/akun"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/setting"
+        android:background="@drawable/custom_button2"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_icon_right"
+            android:layout_toRightOf="@id/iv_akuns"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="280dp"
+            >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/iv_akuns"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_akun"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_akun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_akuns"
+            android:text="Akun"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+        </TextView>
+    </RelativeLayout>
+    <!--    End Relative Layout Akun -->
+
+
+    <!--    Start Relative Layout Bahasa -->
+    <RelativeLayout
+        android:id="@+id/bahasa"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/akun"
+        android:background="@drawable/custom_button2"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_icon_right"
+            android:layout_toRightOf="@id/language"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="280dp"
+            >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/language"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_language"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/language"
+            android:text="Bahasa"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+        </TextView>
+    </RelativeLayout>
+
+    <!--    End Relative Layout Bahasa -->
+
+
+    <!--    Start Relative Layout Tentang Kami -->
+    <RelativeLayout
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/bahasa"
+        android:background="@drawable/custom_button2"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_icon_right"
+            android:layout_toRightOf="@id/logo_about"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="280dp"
+            >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/logo_about"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_about_logo">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/logo_about"
+            android:text="Tentang Kami"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+        </TextView>
+    </RelativeLayout>
+    <!--    End Relative Layout Tentang Kami -->
+
+
+    <!--    Start Relative Layout Versi App -->
+    <RelativeLayout
+        android:id="@+id/versionapp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/about"
+        android:background="@drawable/custom_button2"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.0"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/logo_versionapp"
+            android:layout_marginLeft="280dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            >
+
+        </TextView>
+<!--        <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/ic_icon_right"-->
+<!--            android:layout_toRightOf="@id/iv_akuns"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="280dp"-->
+<!--            >-->
+<!--        </ImageView>-->
+
+        <ImageView
+            android:id="@+id/logo_versionapp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_cil_touch_app">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/logo_versionapp"
+            android:text="Versi App"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+        </TextView>
+    </RelativeLayout>
+    <!--    End Relative Layout Versi App -->
+
+
+    <!--    Start Relative Layout Log Out -->
+    <RelativeLayout
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/versionapp"
+        android:background="@drawable/custom_button2"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_icon_right"
+            android:layout_toRightOf="@id/logo_logout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="280dp"
+            >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/logo_logout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_logout">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/logo_logout"
+            android:text="Keluar"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+        </TextView>
+    </RelativeLayout>
+    <!--    End Relative Layout Log Out -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,14 +7,24 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="id.himtif.android.movieapp.HomeFragment"
+        android:name="id.himtif.android.movieapp.view.HomeFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detailMovieFragment"
+            app:destination="@id/detailMovieFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="id.himtif.android.movieapp.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/detailMovieFragment"
+        android:name="id.himtif.android.movieapp.DetailMovieFragment"
+        android:label="fragment_detail_movie"
+        tools:layout="@layout/fragment_detail_movie" />
 
 </navigation>

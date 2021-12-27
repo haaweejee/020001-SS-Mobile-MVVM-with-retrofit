@@ -5,4 +5,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
+    <string name="on_premier">Sedang Tayang</string>
+    <string name="status">Status</string>
+    <string name="duration">Durasi</string>
+    <string name="release">Rilis</string>
+    <string name="director">Sutradara</string>
+    <string name="genre">Genre</string>
+    <string name="overview">Sinopsis</string>
+    <string name="_9_8">9.8</string>
 </resources>

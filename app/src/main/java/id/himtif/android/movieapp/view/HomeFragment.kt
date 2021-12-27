@@ -55,9 +55,13 @@ class HomeFragment : Fragment() {
     private fun initializeVerticalAdapter(){
         verticalAdapter = MovieVerticalAdapter()
         binding.apply {
-            rvVerticalList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            rvVerticalList.adapter = verticalAdapter
-            rvVerticalList.setHasFixedSize(true)
+            rvPremierList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            rvPremierList.adapter = verticalAdapter
+            rvPremierList.setHasFixedSize(true)
+
+            rvOnComing.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            rvOnComing.adapter = verticalAdapter
+            rvOnComing.setHasFixedSize(true)
         }
 
         verticalAdapter.setOnItemClick(object :OnItemClickCallback{

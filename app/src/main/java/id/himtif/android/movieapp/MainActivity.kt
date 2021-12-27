@@ -2,6 +2,7 @@ package id.himtif.android.movieapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -31,6 +32,15 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration.Builder(
             R.id.navigation_home, R.id.navigation_profile
         ).build()
+
+        navController.addOnDestinationChangedListener{ _, destination, _ ->
+            when(destination.id){
+                R.id.navigation_home -> binding.navView.visibility = View.VISIBLE
+                R.id.navigation_profile -> binding.navView.visibility = View.VISIBLE
+                else -> binding.navView.visibility = View.GONE
+            }
+
+        }
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)

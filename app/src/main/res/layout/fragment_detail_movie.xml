@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMovieFragment">
+
+    <ImageView
+        android:id="@+id/backdropMovie"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@color/black"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/posterMovie"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="140dp"
+        android:src="@color/purple_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backdropMovie" />
+
+    <TextView
+        android:id="@+id/movieName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/posterMovie"
+        app:layout_constraintTop_toBottomOf="@+id/backdropMovie"
+        tools:text="Spiderman No Way Home" />
+
+    <TextView
+        android:id="@+id/titleStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/posterMovie"
+        app:layout_constraintTop_toBottomOf="@+id/movieName" />
+
+    <TextView
+        android:id="@+id/statusMovie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        tools:text="Raeleased"
+        app:layout_constraintStart_toEndOf="@+id/titleStatus"
+        app:layout_constraintTop_toBottomOf="@+id/movieName" />
+
+    <TextView
+        android:id="@+id/titleDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/duration"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/durationMovie"
+        app:layout_constraintStart_toEndOf="@+id/posterMovie"
+        app:layout_constraintTop_toBottomOf="@+id/titleStatus" />
+
+    <TextView
+        android:id="@+id/durationMovie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/statusMovie"
+        app:layout_constraintTop_toBottomOf="@+id/statusMovie"
+        tools:text="2 Jam 23 Menit" />
+
+    <TextView
+        android:id="@+id/titleRelease"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/release"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/releaseMovie"
+        app:layout_constraintStart_toEndOf="@+id/posterMovie"
+        app:layout_constraintTop_toBottomOf="@+id/titleDuration" />
+
+    <TextView
+        android:id="@+id/releaseMovie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/durationMovie"
+        app:layout_constraintTop_toBottomOf="@+id/durationMovie"
+        tools:text="15 Desember 2021" />
+
+    <TextView
+        android:id="@+id/titleDirector"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/director"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/directorMovie"
+        app:layout_constraintStart_toEndOf="@+id/posterMovie"
+        app:layout_constraintTop_toBottomOf="@+id/titleRelease" />
+
+    <TextView
+        android:id="@+id/directorMovie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/releaseMovie"
+        app:layout_constraintTop_toBottomOf="@+id/releaseMovie"
+        tools:text="JohnWats" />
+
+    <TextView
+        android:id="@+id/titleGenre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/genre"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/directorMovie"
+        app:layout_constraintStart_toEndOf="@+id/posterMovie"
+        app:layout_constraintTop_toBottomOf="@+id/titleDirector" />
+
+    <TextView
+        android:id="@+id/genreMovie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/directorMovie"
+        app:layout_constraintTop_toBottomOf="@+id/directorMovie"
+        tools:text="Action" />
+
+    <TextView
+        android:id="@+id/movieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="@string/_9_8"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/posterMovie"
+        app:layout_constraintEnd_toEndOf="@+id/posterMovie" />
+
+    <TextView
+        android:id="@+id/titleOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/overview"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/posterMovie" />
+
+    <TextView
+        android:id="@+id/overviewMovie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleOverview"
+        tools:text="WKWKWKWKWKWKWKWKKWKWKWKWKWKWKWKWKWKWKKWKWKWKWKWKWKWKWKWKWKWKKWKWWKWKWKWKKWKWKWKWKWKWKWKWKWKKW" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
